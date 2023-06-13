@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+body{
+    background-color: #DED5CF;
+    background-image: url(pattern3.png);
+    color: #F7F9F9;
+}
+a{
+    color: #F7F9F9;
+}
+p{
+    font-size: 25px;
+}
+img{
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: #621708;
+    width: 100%;
+    z-index: 100;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+/*Top bar*/
+.topBar{
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #24050A;
+}
+.topBar h6{
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-right: auto;
+}
+.topBar a{
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+/*-----------------*/
+
+/*Nav Header*/
+.navHeader{
+    margin-right: auto;
+}
+.navHeader a{
+    text-decoration: none;
+}
+.navBar .navHeader a h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+/*-------------*/
+
+/*Navigation Links*/
+.navBar .links ul{
+    margin-right: 20px;
+}
+.navBar .links ul li{
+    display: inline-block;
+    list-style: none;
+    padding: auto 10px;
+}
+.navBar .links ul li a{
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.navBar .links ul a:hover, a:active{
+    background-color: #DED5CF;
+    transition: .5s;
+}
+/*----------------*/
+
+/*Drop down list*/
+.navBar .navDrop{
+    display: none;
+    position: absolute;
+    background-color: #621708;
+    border-bottom: #F7F9F9 solid 1px;
+    border-top: #F7F9F9 solid 1px;
+    text-align: center;
+    top: 60px;
+    width: 100%;
+}
+.navBar .navDrop li{
+    list-style: none;
+    padding: 10px 0px;
+}
+.navBar .navDrop li a{
+    text-decoration: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.navBar .navDrop a:hover, a:active{
+    background-color: #A76D60;
+    transition: .5s;
+}
+/*-----------------*/
+
+/*Fas fa bars button*/
+#check{
+    display: none;
+}
+.checkBtn{
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin: 0px 28px;
+}
+.checkBtn:hover{
+    /*RGB but with opacity.*/
+    background-color: rgba(99, 99, 99, .5);
+}
+/*-------------------*/
+
+section{
+    display: grid;
+    margin: 0px 30px;
+    place-items: center;
+    align-content: center;
+    /*For more scrolling.*/
+    min-height: 600px;
+    color: black;
+}
+@media(min-width:1050px){
+    .aboutSection .aboutBG{
+        width: 1000px;
+    }
+    .hoursSection .hoursBG{
+        width: 800px;
+    }
+}
+.disc{
+    max-width: 300px;
+}
+
+/*Home Section*/
+.homeSection{
+    display: flex;
+    background-image: url(storefront.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% auto;
+    margin: 0px;
+    color: #F7F9F9;
+}
+.homeText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    max-width: 80%;
+    margin: 0px auto;
+}
+.homeText h1{
+    font-size: 50px;
+    padding: 10px 0px;
+}
+.homeText h1, h2{
+    text-align: center;
+}
+.homeTextBG{
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+@media(max-width:800px){
+    .homeSection{
+        background-size: 800px auto;
+    }
+}
+@media(max-width:350px){
+    .homeText{
+        margin: 0px auto;
+    }
+}
+/*----------------*/
+
+/*About section*/
+.aboutSection{
+    min-height: 400px;
+    margin: 50px 0px;
+}
+.aboutBG{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #F7F9F9;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid #601700;
+    border-style: dashed;
+    width: 90%;
+    height: 100%;
+}
+.aboutBG div{
+    margin: 10px auto;
+    height: auto; 
+    padding: 0px 5px;
+}
+/*Changes the scale of the img when width changes*/
+@media (max-width:700px){
+    .aboutBG{
+        width: 110%;
+    }
+    img, .aboutBG div{
+        max-width: 90%;
+        padding: 0px;
+    }
+}
+/*----------------*/
+
+/*Hours section*/
+.hoursBG{
+    display: grid;
+    background-color: #F7F9F9;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid #601700;
+    border-style: dashed;
+    width: 80%;
+    height: 110%;
+}
+.table{
+    display: grid;
+    color: black;
+    place-items: center;
+    text-align: center;
+}
+.table h2, h3{
+    color: black;
+    padding: 0px 10px;
+}
+.timeTable{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+.timeTable tr td{
+    border: 2px solid;
+    padding: 5px 20px;
+    text-align: center;
+    color: black;
+}
+.table a{
+    color: black;
+    text-decoration: none;
+}
+/*Changes width of the hours background
+  and table to fit slimmer displays*/
+@media(max-width:750px){
+    .timeTable tr td{
+        font-size: 13px;
+        padding: 3px 10px;
+    }
+}
+@media (max-width:600px){
+    .hoursBG{
+        width: 100%;
+    }
+    .timeTable tr td{
+        padding: 2px;
+    }
+    .hoursSection{
+        margin: 0px;
+    }
+}
+/*-------------------*/
+
+/*contact section*/
+.contactArea{
+    background-color: #601700;
+    text-align: center;
+    padding: 30px;
+}
+.contactArea a{
+    text-decoration: none;
+}
+.contactArea h3, h4{
+    padding: 2px 0px;
+    color: #F7F9F9;
+}
+.contactAreaName{
+    display: grid;
+    text-align: left;
+}
+/*------------------*/
+
+/*Toggles the display of the list*/
+@media (max-width: 750px){
+    .navBar .links ul{
+        display: none;
+    }
+    .checkBtn{
+        display: inline-block;
+    }
+    #check:checked ~ .navDrop{
+        display: block;
+    }
+}
+/*--------------------------*/
+
+/*Header size change when width changes*/
+@media (max-width:600px){
+    .navBar .navHeader a h1{
+        font-size: 28px;
+    }
+}
+@media (max-width:400px){
+    .navBar .navHeader a h1{
+        font-size: 25px;
+    }
+}
+/*----------------------*/
+
+/*Menu*/
+.menuHeader{
+    margin: 0px auto;
+}
+.menuHeader a{
+    text-decoration: none;
+}
+.menuSection{
+    margin-top: 50px;
+    text-align: center;
+}
+.menuSection img{
+    max-width: 700px;
+    height: auto;
+}
+@media(max-width: 780px){
+    .menuSection img{
+        max-width: 100%;
+    }
+}
+/*----------------------*/
